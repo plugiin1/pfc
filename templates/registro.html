@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>Criar Sua Conta Segura</h2>
+    <p class="subtitle">Utilizamos hash criptográfico Argon2/PBKDF2 para sua proteção.</p>
+    <form method="post">
+        <input type="text" name="username" placeholder="Nome de usuário desejado" required autofocus>
+        <input type="password" name="password" placeholder="Sua senha forte" required>
+        <button type="submit">Cadastrar e Gerar 2FA</button>
+    </form>
+    <div class="nav-links">
+        <a href="{{ url_for('login') }}">Já possui uma conta? Entrar</a>
+    </div>
+{% endblock %}

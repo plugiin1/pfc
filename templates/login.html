@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>Acesse Sua Conta</h2>
+    <p class="subtitle">Entre com suas credenciais para a primeira fase.</p>
+    <form method="post">
+        <input type="text" name="username" placeholder="Seu nome de usuário" required autofocus>
+        <input type="password" name="password" placeholder="Sua senha" required>
+        <button type="submit">Entrar</button>
+    </form>
+    <div class="nav-links">
+        <a href="{{ url_for('registro') }}">Novo por aqui? Crie sua conta segura</a>
+    </div>
+{% endblock %}

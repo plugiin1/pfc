@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <div style="padding: 20px 0;">
+        <h2 style="color: #42b72a;">Acesso Autorizado!</h2>
+        <p class="subtitle">Bem-vindo à sua área segura, <strong>{{ session['usuario'] }}</strong>.</p>
+        <p style="color: #606770; font-size: 15px;">Todos os requisitos de segurança foram validados com sucesso.</p>
+        <form action="{{ url_for('logout') }}" method="post" style="margin-top: 40px;">
+            <button type="submit" class="logout">Encerrar Sessão com Segurança</button>
+        </form>
+    </div>
+{% endblock %}

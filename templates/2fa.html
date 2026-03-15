@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>Segunda Fase: Autenticação</h2>
+    <p class="subtitle">Adicione a seguinte chave ao seu aplicativo de autenticação (como Google Authenticator ou Authy):</p>
+    
+    <div class="key-box">
+        {% with messages = get_flashed_messages() %}
+            {% for message in messages %}
+                {% if "chave 2FA" in message %}
+                    {{ message.split(': ')[1] }}
+                {% endif %}
+            {% endfor %}
+        {% endwith %}
+    </div>
+
+    <p style="font-size: 15px; color: #606770; margin-bottom: 20px;">Insira abaixo o código de 6 dígitos gerado pelo aplicativo:</p>
+    
+    <form method="post">
+        <input type="text" name="codigo" placeholder="000 000" maxlength="6" pattern="\d{6}" required autofocus>
+        <button type="submit" class="verify">Verificar Código</button>
+    </form>
+{% endblock %}
