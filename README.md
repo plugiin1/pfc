@@ -1,6 +1,6 @@
 # 🛡️ Autenticação e Gestão de Credenciais.
 
-Este repositório contém uma implementação prática de um sistema de login de alta segurança, desenvolvido para cumprir rigorosos requisitos de proteção de dados e controle de acesso. O projeto utiliza o framework Flask e foca na defesa contra ataques comuns, como força bruta e vazamento de banco de dados.
+Este projeto evoluiu para uma solução de autenticação completa, integrando não apenas o acesso seguro via MFA (Multi-Factor Authentication), mas também um Fluxo de Recuperação de Conta Seguro. A aplicação utiliza tokens temporários e logs de auditoria para garantir que a redefinição de senhas siga os padrões modernos de cibersegurança, evitando vetores de ataque como sequestro de contas e interceptação de credenciais.
 
 ## 📋 Requisitos Implementados
 
